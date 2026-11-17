@@ -19,7 +19,7 @@
 
 1. Установите Node.js 20.6 или новее и PostgreSQL.
 2. Создайте пустую базу данных в PostgreSQL.
-3. В папке `server/` скопируйте `.env.example` в `.env` и заполните `DATABASE_URL` и `JWT_SECRET` (длинная случайная строка).
+3. В папке `server/` скопируйте `.env.example` в `.env` и заполните значения. Для начала достаточно `DATABASE_URL`, `JWT_SECRET` (длинная случайная строка), `JWT_EXPIRES_IN` (например, `7d`), `CLIENT_URL` (`http://localhost:5173`), `PORT` (`3000`), `DAILY_QUESTION_LIMIT` (`20`) и `AI_PROVIDER=mock` (ответы-заглушки без ключа).
 4. Выполните:
 
 ```bash

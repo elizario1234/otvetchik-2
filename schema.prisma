@@ -1,0 +1,83 @@
+// Описание таблиц (см. docs/architecture.md, раздел 5)
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+enum Language {
+  RU
+  EN
+  KK
+}
+
+enum QuestionStatus {
+  PENDING
+  DONE
+  FAILED
+}
+
+model User {
+  id           String     @id @default(uuid())
+  email        String     @unique @db.VarChar(255)
+  passwordHash String     @map("password_hash") @db.VarChar(255)
+  name         String     @db.VarChar(100)
+  role         Role       @default(USER)
+  uiLanguage   Language   @default(RU) @map("ui_language")
+  isBlocked    Boolean    @default(false) @map("is_blocked")
+  createdAt    DateTime   @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt    DateTime   @updatedAt @map("updated_at") @db.Timestamptz
+  questions    Question[]
+
+  @@map("users")
+}
+
+model Question {
+  id        String         @id @default(uuid())
+  userId    String         @map("user_id")
+  text      String
+  language  Language
+  status    QuestionStatus @default(PENDING)
+  errorCode String?        @map("error_code") @db.VarChar(50)
+  createdAt DateTime       @default(now()) @map("created_at") @db.Timestamptz
+  deletedAt DateTime?      @map("deleted_at") @db.Timestamptz
+  user      User           @relation(fields: [userId], references: [id])
+  answers   Answer[]
+
+  @@index([userId, createdAt])
+  @@map("questions")
+}
+
+model Answer {
+  id           String         @id @default(uuid())
+  questionId   String         @map("question_id")
+  text         String
+  language     Language
+  isSimplified Boolean        @default(false) @map("is_simplified")
+  provider     String         @db.VarChar(50)
+  createdAt    DateTime       @default(now()) @map("created_at") @db.Timestamptz
+  question     Question       @relation(fields: [questionId], references: [id])
+  sources      AnswerSource[]
+
+  @@map("answers")
+}
+
+model AnswerSource {
+  id       String  @id @default(uuid())
+  answerId String  @map("answer_id")
+  url      String
+  title    String? @db.VarChar(300)
+  position Int
+  answer   Answer  @relation(fields: [answerId], references: [id])
+
+  @@map("answer_sources")
+}

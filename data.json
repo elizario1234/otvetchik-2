@@ -1,0 +1,203 @@
+{
+  "users": [
+    {
+      "key": "admin",
+      "name": "Администратор",
+      "email": "admin@handcraft.kz",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "key": "alexandr",
+      "name": "Царёв Александр",
+      "email": "alexandr@handcraft.kz",
+      "password": "master123",
+      "role": "seller",
+      "shop": "Глина и огонь"
+    },
+    {
+      "key": "parviz",
+      "name": "Гиулаев Парвиз",
+      "email": "arvix@handcraft.kz",
+      "password": "master123",
+      "role": "seller",
+      "shop": "Дерево и руки"
+    },
+    {
+      "key": "timur",
+      "name": "Ким Тимур",
+      "email": "timur@handcraft.kz",
+      "password": "master123",
+      "role": "seller",
+      "shop": "Тёплые нити"
+    },
+    {
+      "key": "elizar",
+      "name": "Нуртазин Елизар",
+      "email": "elizar@handcraft.kz",
+      "password": "master123",
+      "role": "seller",
+      "shop": "Воск и свет"
+    },
+    {
+      "key": "buyer",
+      "name": "Арзиев Амирхан",
+      "email": "buyer@handcraft.kz",
+      "password": "buyer123",
+      "role": "buyer"
+    },
+    {
+      "key": "sergey",
+      "name": "Алексеев Сергей",
+      "email": "sergey@handcraft.kz",
+      "password": "buyer123",
+      "role": "buyer"
+    }
+  ],
+  "categories": [
+    {
+      "slug": "ceramics",
+      "name": "Керамика"
+    },
+    {
+      "slug": "candles",
+      "name": "Свечи"
+    },
+    {
+      "slug": "knitting",
+      "name": "Вязание"
+    },
+    {
+      "slug": "wood",
+      "name": "Дерево"
+    }
+  ],
+  "products": [
+    {
+      "seller": "alexandr",
+      "category": "ceramics",
+      "name": "Кружка «Синий рассвет»",
+      "price": 4500,
+      "stock": 12,
+      "image": "https://unsplash.com/photos/-MFKq5JIHcw/download?force=true&w=900",
+      "description": "Керамическая кружка с блюдцем, покрытая глазурью цвета утреннего неба. Лепится вручную, обжигается дважды. Объём 320 мл, подходит для посудомоечной машины."
+    },
+    {
+      "seller": "alexandr",
+      "category": "ceramics",
+      "name": "Пара белых кружек",
+      "price": 8200,
+      "stock": 8,
+      "image": "https://unsplash.com/photos/vQQoZzKO9Ig/download?force=true&w=900",
+      "description": "Две одинаковые кружки с мягким матовым покрытием. Ровные стенки, удобная ручка и тёплый оттенок глины, который виден по краю."
+    },
+    {
+      "seller": "alexandr",
+      "category": "ceramics",
+      "name": "Кружка «Белая тишина»",
+      "price": 3800,
+      "stock": 15,
+      "image": "https://unsplash.com/photos/NiQjjEnfS-c/download?force=true&w=900",
+      "description": "Минималистичная белая кружка для утреннего кофе. Каждая кружка чуть отличается формой, поэтому двух одинаковых не бывает."
+    },
+    {
+      "seller": "alexandr",
+      "category": "ceramics",
+      "name": "Набор пиал и чашек",
+      "price": 12500,
+      "stock": 5,
+      "image": "https://unsplash.com/photos/lSRVxgcmwLY/download?force=true&w=900",
+      "description": "Набор из шести предметов ручной лепки: пиалы и чашки в одной цветовой гамме. Подойдёт для чая, десертов и сервировки на каждый день."
+    },
+    {
+      "seller": "alexandr",
+      "category": "ceramics",
+      "name": "Кружка «Кофе на дереве»",
+      "price": 4200,
+      "stock": 10,
+      "image": "https://unsplash.com/photos/MH8Iu7OC_UE/download?force=true&w=900",
+      "description": "Плотная кружка с широким дном, не остывает долго. Глазурь безопасна для еды, форма хорошо ложится в ладонь."
+    },
+    {
+      "seller": "elizar",
+      "category": "candles",
+      "name": "Соевая свеча «Лаванда»",
+      "price": 5200,
+      "stock": 20,
+      "image": "https://unsplash.com/photos/K1Xi_R_mfpk/download?force=true&w=900",
+      "description": "Свеча из соевого воска в стеклянной банке с хлопковым фитилём. Аромат лаванды и ванили, горит около 40 часов."
+    },
+    {
+      "seller": "elizar",
+      "category": "candles",
+      "name": "Набор белых свечей",
+      "price": 6900,
+      "stock": 14,
+      "image": "https://unsplash.com/photos/tRk9WKkEf7Q/download?force=true&w=900",
+      "description": "Три белые свечи разной высоты. Выливаются вручную из натурального воска, горят ровно и почти без копоти."
+    },
+    {
+      "seller": "timur",
+      "category": "knitting",
+      "name": "Набор вязаных шарфов",
+      "price": 14900,
+      "stock": 6,
+      "image": "https://unsplash.com/photos/CNjfgzoY8JU/download?force=true&w=900",
+      "description": "Три шарфа из мягкой шерсти в спокойных серо-зелёных тонах. Связаны вручную крупной вязкой, не колются и хорошо держат тепло."
+    },
+    {
+      "seller": "timur",
+      "category": "knitting",
+      "name": "Плед из мериноса",
+      "price": 38000,
+      "stock": 3,
+      "image": "https://unsplash.com/photos/JOb07EpGhok/download?force=true&w=900",
+      "description": "Большой плед плотной вязки из шерсти мериноса. Размер 140 на 190 см. Стирка деликатная, при 30 градусах."
+    },
+    {
+      "seller": "timur",
+      "category": "knitting",
+      "name": "Кардиган крупной вязки",
+      "price": 29500,
+      "stock": 4,
+      "image": "https://unsplash.com/photos/IN6KPUe8j04/download?force=true&w=900",
+      "description": "Свободный кардиган из шерстяной пряжи, связан спицами за две недели. Размер универсальный, от S до L."
+    },
+    {
+      "seller": "parviz",
+      "category": "wood",
+      "name": "Доска с деревянными ложками",
+      "price": 9800,
+      "stock": 7,
+      "image": "https://unsplash.com/photos/MvDOOkWPpGs/download?force=true&w=900",
+      "description": "Разделочная доска из массива бука и две ложки в комплекте. Покрыта пищевым маслом, не боится воды и ножей."
+    },
+    {
+      "seller": "parviz",
+      "category": "wood",
+      "name": "Бамбуковый столовый набор",
+      "price": 7400,
+      "stock": 9,
+      "image": "https://unsplash.com/photos/2qk6Y3VFHzk/download?force=true&w=900",
+      "description": "Ложка, вилка и нож из бамбука на небольшой доске. Удобно брать с собой на пикник или в поездку."
+    },
+    {
+      "seller": "parviz",
+      "category": "wood",
+      "name": "Деревянные ложки, пара",
+      "price": 3200,
+      "stock": 18,
+      "image": "https://unsplash.com/photos/yPHqPB9xa5g/download?force=true&w=900",
+      "description": "Две ложки, вырезанные из цельного куска берёзы. Гладкие, без лака, пахнут деревом и приятно лежат в руке."
+    },
+    {
+      "seller": "parviz",
+      "category": "wood",
+      "name": "Набор ложек в стакане",
+      "price": 5600,
+      "stock": 11,
+      "image": "https://unsplash.com/photos/68CDDj03rks/download?force=true&w=900",
+      "description": "Набор кухонных ложек и лопаток из дерева, стоят в керамическом стакане. Хороший подарок на новоселье."
+    }
+  ]
+}
